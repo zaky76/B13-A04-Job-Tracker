@@ -10,7 +10,7 @@ Answer: getElementById - when we need for get unique data then we are use this.
 
 2. How do you create and insert a new element into the DOM?
 
-Answer: First, we create a new HTML tag in the browser memory using the document.createElement method. At this stage, the element is created but not yet visible. After creating the tag, we add text, classes, or other attributes to it. This defines how the element will look and what it will contain. Finally, we must determine where the element should be placed on the page and insert it.
+Answer: Three step here like first, we create a new HTML tag in the browser memory using the document.createElement method. At this stage, the element is created but not yet visible. After creating the tag, we add text, classes, or other attributes to it. This defines how the element will look and what it will contain. Finally, we must determine where the element should be placed on the page and insert it.
 
 
 
@@ -34,4 +34,4 @@ it's bad way like attaching 50 separate event listeners to each. This consumes s
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
 
-Answer: 
+Answer: In JavaScript, preventDefault and stopPropagation are both essential for event handling, but they serve completely different purposes. Every html element has certain default behaviors provided by the browser. preventDefault is used to stop that specific behavior from happening. when we click on a child element, that event "spreads" or moves up toward its parent and other ancestor elements. stopPropagation is used to stop this spreading or "bubbling" process.
