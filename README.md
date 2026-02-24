@@ -26,8 +26,8 @@ Capturing Phase: The event goes down from the window to the target element. Targ
 Answer: Event Delegation is a design pattern in javaScript used to handle events efficiently. Instead of adding an event listener to every single child element, you add a single event listener to a common parent element.
 It works because of event bubbling, where an event triggered on a child "bubbles up" through its ancestors in the DOM tree.
 example like-
-when er have a list (<ul>) containing 50 items (<li>). we want to perform an action (like deleting the item) whenever any <li> is clicked.
-it's bad way like attaching 50 separate event listeners to each <li>. This consumes significant memory and degrades performance, especially on slower devices.so best way attaching one event listener to the <ul>. When an <li> is clicked, the click event bubbles up to the <ul>, where you can catch it and identify which item was clicked using event.target.
+when er have a list containing 50 items. we want to perform an action (like deleting the item) whenever any is clicked.
+it's bad way like attaching 50 separate event listeners to each. This consumes significant memory and degrades performance, especially on slower devices.so best way attaching one event listener to the. When an is clicked, the click event bubbles up to the, where you can catch it and identify which item was clicked using event.target.
 
 
 
