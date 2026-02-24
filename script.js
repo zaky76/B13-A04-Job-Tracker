@@ -189,6 +189,10 @@ function renderInterview() {
                         class="rejected-btn text-[#EF4444] border border-red-300 rounded-sm px-4 py-2">REJECTED</button>
                 </div>
         </div>
+        <div>
+            <button class="delete-btn rounded-full shadow-md  border border-red-300 text-[#EF4444] py-2 px-2"><i
+                    class="fa-solid fa-trash-can"></i></button>
+        </div>
             `
         filteredSection.appendChild(div)
     }
@@ -221,6 +225,10 @@ function renderRejected() {
                         class="rejected-btn text-[#EF4444] border border-red-300 rounded-sm px-4 py-2">REJECTED</button>
                 </div>
           </div>
+          <div>
+                <button class="delete-btn rounded-full shadow-md  border border-red-300 text-[#EF4444] py-2 px-2"><i
+                        class="fa-solid fa-trash-can"></i></button>
+            </div>
             `
         filteredSection.appendChild(div)
     }
