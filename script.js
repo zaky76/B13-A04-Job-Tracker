@@ -147,6 +147,8 @@ mainContainer.addEventListener('click', function (event) {
         
         parentCard.remove();
 
+        updateAvailableJobsCount();
+
         interviewCountList = interviewCountList.filter(item => item.companyName !== companyName);
         rejectedCountList = rejectedCountList.filter(item => item.companyName !== companyName);
 
@@ -160,6 +162,15 @@ mainContainer.addEventListener('click', function (event) {
     }
 }
 })
+
+// total count updating
+function updateAvailableJobsCount() {
+    const jobCountDisplay = document.getElementById('total-job-count');
+    const currentJobs = allCardSection.children.length;
+    
+    jobCountDisplay.innerText = `${currentJobs} Jobs`;
+}
+
 
 function renderInterview() {
     filteredSection.innerHTML = ''

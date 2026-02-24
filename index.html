@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <Header class="w-[80%] mx-auto mt-5">
+    <Header class="w-[80%] mx-auto mt-5 md:mt-7">
         <h1 class="text-3xl font-bold text-[#002C5C]">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-4 py-5">
             <div class="bg-white border border-gray-300 rounded-2xl shadow-md py-4 px-6">
@@ -46,9 +46,9 @@
     <main class="w-[80%] mx-auto">
         <div class="top-message flex justify-between py-5">
             <h2 class="text-xl text-[#002C5C] font-semibold">Available Jobs</h2>
-            <p class="total-job">8 Jobs</p>
+            <p id="total-job-count" class="total-job">8 Jobs</p>
         </div>
-        <div class="mb-5">
+        <div class="mb-5 text-center md:text-left lg:text-left">
             <button onclick="toggleStyle('all-filter-btn')"
                 class="bg-[#3B82F6] text-white border border-gray-300 rounded  px-6 py-2"
                 id="all-filter-btn">All</button>
@@ -66,12 +66,12 @@
 
         <div id="no-data-msg"
             class="hidden flex flex-col items-center justify-center p-16 bg-white  border border-gray-200 rounded-xl shadow-sm mt-10">
-            <div class= "p-6 rounded-2xl mb-6">
+            <div class="p-6 rounded-2xl mb-6">
                 <i class="fa-solid fa-file-lines text-6xl text-blue-400"></i>
             </div>
 
             <h2 class="text-[#002C5C] text-2xl font-bold mb-2">No jobs available</h2>
-            <p class="text-gray-400 text-lg">Check back soon for new job opportunities</p>
+            <p class="text-gray-400 text-lg text-center">Check back soon for new job opportunities</p>
         </div>
 
 
