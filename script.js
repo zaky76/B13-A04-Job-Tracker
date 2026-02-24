@@ -180,7 +180,7 @@ function renderInterview() {
                 </div>
 
                 <div><span class="status bg-blue-100 text-blue-950 py-2 px-3">${interview.status}</span></div>
-                <p class="notes text-[16px]"${interview.notes}</p>
+               <p class="notes text-[16px]">${interview.notes}</p>
 
                 <div class="flex gap-5">
                     <button
@@ -216,7 +216,7 @@ function renderRejected() {
                 </div>
 
                 <div><span class="status bg-blue-100 text-blue-950 py-2 px-3">${rejected.status}</span></div>
-                <p class="notes text-[16px]"${rejected.notes}</p>
+                <p class="notes text-[16px]">${rejected.notes}</p>
 
                 <div class="flex gap-5">
                     <button
