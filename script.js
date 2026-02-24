@@ -13,7 +13,6 @@ const allFilterBtn = document.getElementById('all-filter-btn');
 const interviewFilterBtn = document.getElementById('interview-filter-btn');
 const rejectedFilterBtn = document.getElementById('rejected-filter-btn');
 const filteredSection = document.getElementById('filtered-section');
-
 const noDataMsg = document.getElementById('no-data-msg');
 
 
@@ -26,6 +25,7 @@ function calculateTotalCount() {
 calculateTotalCount()
 
 
+//toggle
 function toggleStyle(id) {
     const buttons = [allFilterBtn, interviewFilterBtn, rejectedFilterBtn];
     
@@ -64,6 +64,7 @@ function toggleStyle(id) {
 } 
 
 mainContainer.addEventListener('click', function (event) {
+    // for interview
     if (event.target.classList.contains('interview-btn')) {
         const ParentNode = event.target.parentNode.parentNode;
         const companyName = ParentNode.querySelector('.companyName').innerText;
@@ -102,6 +103,7 @@ mainContainer.addEventListener('click', function (event) {
 
 
     }
+    // for reject
     else if (event.target.classList.contains('rejected-btn')) {
         const ParentNode = event.target.parentNode.parentNode;
         const companyName = ParentNode.querySelector('.companyName').innerText;
@@ -136,6 +138,7 @@ mainContainer.addEventListener('click', function (event) {
         }
         calculateTotalCount()
     }
+    // for delete
     else if (event.target.closest('.delete-btn')) {
     const parentCard = event.target.closest('.card');
     const companyName = parentCard.querySelector('.companyName').innerText;
@@ -147,7 +150,6 @@ mainContainer.addEventListener('click', function (event) {
         interviewCountList = interviewCountList.filter(item => item.companyName !== companyName);
         rejectedCountList = rejectedCountList.filter(item => item.companyName !== companyName);
 
-      
         calculateTotalCount();
 
         if (currentStatus === 'interview-filter-btn') {
